@@ -1,8 +1,8 @@
 link-package
 ============
-**No more `require("./../../../../../../../../some/other/file.js")`.**
+**No more require("./../../../../../../../../some/other/file.js").**
 
-In large node.js applications, relative `require()` can be really annoying. You probably know code like this:
+In large node.js applications, relative `require()` can be really annoying. You probably already know code like this:
 
 ```javascript
 var moduleA = require("./../../../../../../../../path/to/moduleA.js");
@@ -19,6 +19,7 @@ var moduleC = require("your-app/path/to/moduleC.js");
 ```
 
 **link-package** just creates a symlink in your project's `node_modules`  pointing to your project folder (or a sub-folder).
+
 <br>
 
 Installation
@@ -33,7 +34,7 @@ Usage
 
 You can use **link-package** in two ways:
 
-- with [npm scripts](https://docs.npmjs.com/misc/scripts)
+- [npm scripts](https://docs.npmjs.com/misc/scripts)
 - node API
 
 ### [npm scripts](https://docs.npmjs.com/misc/scripts)
@@ -44,16 +45,18 @@ Add this to the `scripts`-section of your `package.json`:
 "scripts": {
     ...
     "prestart": "link-package",
+    "pretest": "link-package",
     ...
 }
 ```
 
-This will create the symlink before you run `npm start`.
+This will create the symlink before you run `npm start` or `npm test`.
 
 **Subfolders:** If you want the symlink to point to a subfolder like `app` or `lib` you can also pass an argument to `link-package`:
 
 ```javascript
     "prestart": "link-package app",
+    "pretest": "link-package app",
 ```
 
 ### node API
