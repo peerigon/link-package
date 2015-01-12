@@ -14,7 +14,7 @@ function linkPackage() {
             throw new Error("There is already another package '" + packageName + "' installed");
         }
     } else {
-        fs.linkSync(dstPath, srcPath);
+        fs.linkSync(srcPath, dstPath);
     }
 }
 
