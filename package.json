@@ -1,0 +1,24 @@
+{
+  "name": "link-package",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./linkPackage.js",
+  "bin" : {
+      "link-package" : "./bin.js"
+  },
+  "keywords": [
+    "link",
+    "package",
+    "app",
+    "node_modules",
+    "require"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peerigon/link-package.git"
+  },
+  "author": "peerigon <developers@peerigon.com>",
+  "license": "Unlicense"
+}
