@@ -1,6 +1,6 @@
 {
   "name": "link-package",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "No more require('./../../../../../../../../some/other/folder/and/file.js')",
   "main": "./linkPackage.js",
   "bin" : {
