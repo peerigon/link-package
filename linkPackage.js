@@ -3,8 +3,8 @@
 var path = require("path");
 var fs = require("fs");
 
-function linkPackage(folderName) {
-    var packageName = require("../../package.json").name;
+function linkPackage(folderName, alias) {
+    var packageName = alias || require("../../package.json").name;
     var nodeModules = path.resolve(__dirname, "../");
     var dstPath = path.join(nodeModules, packageName);
     var srcPath = path.resolve(__dirname, "../../");
