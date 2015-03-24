@@ -21,6 +21,7 @@ function linkPackage(folderName, alias) {
         srcPath = path.join(srcPath, folderName);
     }
 
+    // Deliberately using sync methods because this should usually happen before any other code is executed.
     if (fs.existsSync(dstPath)) {
         if (fs.realpathSync(dstPath) !== srcPath) {
             throw new Error("There is already another package '" + packageName + "' installed");
