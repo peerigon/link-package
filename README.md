@@ -1,3 +1,8 @@
+⚠️ DEPRECATED ⚠️
+==============
+
+With npm, you can specify directories as packages using the `file:` protocol. See [here](http://2ality.com/2018/04/npm-install-directory.html). That's probably a better idea than using symlinks.
+
 link-package
 ============
 **No more require("./../../../../../../../../some/other/file.js").**
